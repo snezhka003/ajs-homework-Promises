@@ -11,8 +11,7 @@ test('Проверка загрузки сохранения', (done) => {
       points: 2000,
     },
   };
-  const received = GameSavingLoader.load();
-  received.then((saving) => {
+  GameSavingLoader.load().then((saving) => {
     expect(saving).toEqual(expected);
     done();
   });
